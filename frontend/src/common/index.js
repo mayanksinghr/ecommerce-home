@@ -1,7 +1,7 @@
 import ProductDetails from "../pages/productDetails";
 
 
-const backendDomain = "http://localhost:8080"
+const backendDomain = "https://ecommerce-home.onrender.com"
 
 const SummaryApi = {
   signup:{
