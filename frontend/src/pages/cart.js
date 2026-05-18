@@ -9,6 +9,9 @@ import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import {loadStripe} from '@stripe/stripe-js'
 const stripePromise = await loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
+console.log("Stripe key:", process.env.REACT_APP_STRIPE_PUBLIC_KEY)
+
+
 const Cart =()=>{
    const [data,setdata] = useState([])
    const [loading,setloading] = useState(false)
