@@ -30,7 +30,8 @@ const tokenData={
 
 const tokenOption={
   httpOnly:true, 
-  secure:true
+  secure:true,
+  sameSite:"none",
 }
 
 
