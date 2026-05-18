@@ -172,8 +172,8 @@ const paymentController = async (request, response) => {
         quantity: item.quantity,
       })),
 
-      success_url: `${process.env.FRONTEND_URL}/success`,
-      cancel_url: `${process.env.FRONTEND_URL}/cancel`,
+      success_url: `https://ecommerce-home-frontend.onrender.com/success`,
+      cancel_url: `https://ecommerce-home-frontend.onrender.com/cancel`,
     };
 
     const session = await stripe.checkout.sessions.create(params);
