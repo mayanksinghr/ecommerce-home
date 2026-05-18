@@ -8,7 +8,7 @@ import { toast } from "react-toastify"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import {loadStripe} from '@stripe/stripe-js'
-
+const stripePromise = await loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
 const Cart =()=>{
    const [data,setdata] = useState([])
    const [loading,setloading] = useState(false)
@@ -133,7 +133,7 @@ const Cart =()=>{
 
 
         const handlePayment =  async()=>{
-        const stripePromise = await loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
+        const stripe = await stripePromise
         const response = await fetch(SummaryApi.payment.url,{
                 method:SummaryApi.payment.method,
                 credentials:"include",
