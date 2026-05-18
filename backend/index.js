@@ -9,7 +9,7 @@ const webhooks = require('./controller/order/webhook');
 
 const app = express()
 app.use(cors({
-origin:process.env.FRONTEND_URL,
+origin:"https://ecommerce-home-frontend.onrender.com",
 credentials:true
 }))
 
