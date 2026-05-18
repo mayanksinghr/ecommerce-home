@@ -50,7 +50,7 @@ const Login=()=>{
                 [name]:value
             }
         })
-    
+    }
 
     const handleSubmit =async(e)=>{
         e.preventDefault()
@@ -64,7 +64,8 @@ const Login=()=>{
         body:JSON.stringify(data)
       })
 
-      const dataApi = await dataResponse.json();}
+      const dataApi = await dataResponse.json();
+    }
      
 
       if(dataApi.success){
@@ -78,7 +79,7 @@ const Login=()=>{
         toast.error(dataApi.message);
       }
 
-     }
+     
 
       
      
